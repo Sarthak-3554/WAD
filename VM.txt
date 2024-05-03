@@ -1,0 +1,48 @@
+sudo apt update
+sudo apt install virtualbox
+sudo apt install virtualbox -ext-pack
+virtualbox
+
+Now open the virtualbox create two VMS by inserting the image downloaded from the drive 
+
+Then go to file- preferences - network then add Nat network
+
+Then go in the settings of both VMS and then in network tab select Nat Network
+
+Then open both the VMs side by side.
+
+In first vm create the file using touch filename
+Then add content in file using nano filename.
+
+Then display the file content using cat filename.
+Check up address on both VMS using command ifconfig
+
+Then transfer file using:-
+scp filename vagrant@ipaddressof secondvm:/home/vagrant
+
+Then you can ls and see the file on second vm and also see the contents of the file using cat.
+
+
+image
+https://drive.google.com/file/d/1Fkvpw1Ky-GiedEYR587QifOSHUTVQkrN/view?usp=sharing
+
+
+
+
+
+Between Two machines
+
+sudo apt-get update
+sudo apt-get install openssh-server
+sudo ufw allow 22           both machine vr takaycha
+
+
+steps:
+1. ssh username@VM1_IP   (Enter into Ubuntu VM)
+2.  nano file1.txt  (OPEN EDITOR...) ADD TEXT AND PRESS CTRL+x THEN y and hit enter
+3. cat file1.txt     to check the content
+4. scp (secured connection protocol)
+  command    scp username(vm2)@VM2_IP:/path_to_dstination
+5. ssh username(vm2)@vm2_ip
+6. cd /path
+7. cat file1.txt

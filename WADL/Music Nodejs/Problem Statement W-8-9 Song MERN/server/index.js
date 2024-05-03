@@ -30,6 +30,12 @@ app.get('/getSong/:id',(req,res)=>{
     .catch(err => res.json(err));
 })
 
+app.get("/count",(req,res)=>{
+    const count = SongModel.find({});
+    console.log(count);
+    // res.status(200).json({count})
+})
+
 app.put('/editSong/:id',(req,res)=>{
     const id = req.params.id;
     SongModel.findByIdAndUpdate({_id:id},req.body)
