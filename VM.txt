@@ -42,7 +42,7 @@ steps:
 2.  nano file1.txt  (OPEN EDITOR...) ADD TEXT AND PRESS CTRL+x THEN y and hit enter
 3. cat file1.txt     to check the content
 4. scp (secured connection protocol)
-  command    scp username(vm2)@VM2_IP:/path_to_dstination
+  command    scp file_name username(vm2)@VM2_IP:/path_to_dstination
 5. ssh username(vm2)@vm2_ip
 6. cd /path
 7. cat file1.txt
